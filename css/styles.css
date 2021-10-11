@@ -9,6 +9,29 @@
   padding: 15px;
 }
 
+.logo {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  line-height: 2.1em;
+  border: 2px solid transparent;
+  width: 70px;
+}
+
+
+.logo:hover {
+  -webkit-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+
+#asideEs {
+  border: black 2px;
+  padding: 15px;
+  margin: 15px;
+  border-radius: 5px;
+}
+
+/*Bootstrap*/
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -683,10 +706,11 @@ progress {
 .container-md,
 .container-sm {
   width: 100%;
-  padding-right: var(--bs-gutter-x, 0.75rem);
-  padding-left: var(--bs-gutter-x, 0.75rem);
+  padding-right: var(--bs-gutter-x, 0.1rem);
+  padding-left: var(--bs-gutter-x, 0.1rem);
   margin-right: auto;
   margin-left: auto;
+  border: #000 1px;
 }
 
 @media (min-width: 576px) {

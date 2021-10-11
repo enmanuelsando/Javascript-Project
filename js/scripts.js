@@ -1,5 +1,3 @@
-const saludo = alert("Bienvenido a la mejor tienda musical de la tierra C-137!");
-
 /*Eventos*/
 
 function validarTelefono() {
@@ -38,12 +36,6 @@ function mostrarDatos() {
   console.log(valores);
 
 }
-
-// manipulacion del DOM con JQuery
-
-$(document).ready(function () {
-  $('#deleteJquery').remove();
-});
 
 // respuesta a eventos por JQuery 
 
