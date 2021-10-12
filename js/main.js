@@ -33,12 +33,12 @@ inventario.push(new Producto('other', 'rick mug', undefined, 7000, undefined, 5,
 inventario.push(new Producto('other', 'Grogu Toy', undefined, 56000, 2019, 10, "img/grogutoy.jpg"));
 
 
-let botones = document.createElement("div");
+// const botones = document.createElement("div");
 
-botones.innerHTML = `<button onclick="filtroPorMayor()"> Productos Mayor de 30000$ </button>
-                        <button onclick="filtroPorMenor()">Productos Menor de 30000$</button>`;
+// botones.innerHTML = `<button onclick="filtroPorMayor()"> Productos Mayor de 30000$ </button>
+//                         <button onclick="filtroPorMenor()">Productos Menor de 30000$</button>`;
 
-document.body.appendChild(botones);
+// document.body.appendChild(botones);
 
 function filtroPorMayor() {
     let mayor = inventario.filter(producto => producto.price >= 30000);

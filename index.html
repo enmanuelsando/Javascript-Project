@@ -45,35 +45,36 @@
     </header>
     <div class="container">
         <div class="row">
-        <!--Aside-->
-        <aside class="col-2" id="asideEs">
-            <div>
-                <h4 id="p1">Si deseas algun otro album te lo encontramos! <br>
-                    Pidelo aqui!
-                </h4>
-                <form>
-                    <label for="nombre">Nombre: </label>
-                    <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br>
-                    <label for="artista">Artista: </label>
-                    <input type="text" name="artista" id="artista" placeholder="Artista"><br>
-                    <label for="ano">Año: </label>
-                    <input oninput="validarAno()" type="year" name="ano" id="ano" placeholder="Año"><br>
-                    <label for="telefono"> Danos tu Telefono para avisarte cuando llegue: </label>
-                    <input onclick="validarTelefono()" type="phone" name="telefono" id="telefono"
-                        placeholder="Telefono"><br>
-                </form>
-                <button class="btn btn-outline-dark mt-auto" id="button" onclick="mostrarDatos()">Solicitar</button>
-            </div>
-        </aside>
-        <!-- Section-->
-        <section class="col">
-            <div class="container px-lg-5 mt-5">
-                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 justify-content-center"
-                    id="productos">
-
+            <!--Aside-->
+            <aside class="col-2" id="asideEs">
+                <div>
+                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMayor()"> Productos Mayor de 30000$ </button>
+                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMenor()">Productos Menor de 30000$</button>
+                    <h4 id="p1">Si deseas algun otro album te lo encontramos! <br>
+                        Pidelo aqui!
+                    </h4>
+                    <form>
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" name="nombre" id="nombre" placeholder="Nombre"><br>
+                        <label for="artista">Artista: </label>
+                        <input type="text" name="artista" id="artista" placeholder="Artista"><br>
+                        <label for="ano">Año: </label>
+                        <input oninput="validarAno()" type="year" name="ano" id="ano" placeholder="Año"><br>
+                        <label for="telefono"> Danos tu Telefono para avisarte cuando llegue: </label>
+                        <input onclick="validarTelefono()" type="phone" name="telefono" id="telefono"
+                            placeholder="Telefono"><br>
+                    </form>
+                    <button class="btn btn-outline-dark mt-auto" id="button" onclick="mostrarDatos()">Solicitar</button>
                 </div>
-            </div>
-        </section>
+            </aside>
+            <!-- Section-->
+            <section class="col">
+                <div class="container px-lg-5 mt-5">
+                    <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 justify-content-center" id="productos">
+
+                    </div>
+                </div>
+            </section>
         </div>
     </div>
     <!-- Footer-->
