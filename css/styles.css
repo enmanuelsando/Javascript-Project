@@ -9,6 +9,11 @@
   padding: 15px;
 }
 
+#bgGradient {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(58, 68, 52, 1) 42%, rgba(44, 159, 159, 1) 100%);
+}
+
 .logo {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -29,6 +34,52 @@
   margin: 15px;
   border-radius: 5px;
 }
+
+/*Login*/
+.container1 {
+  padding: 2rem 0rem;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 400px;
+    padding: 1rem;
+  }
+}
+
+.modal-content {
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.modal-header {
+  margin-top: -1.5rem;
+}
+
+.close {
+  margin-top: -1.5rem;
+}
+
+.form-title {
+  margin: -2rem 0rem 2rem;
+}
+
+.btn-round {
+  border-radius: 3rem;
+}
+
+.delimiter {
+  padding: 1rem;
+}
+
+.social-buttons {
+  margin: 0 0.5rem 1rem;
+}
+
+.btn {
+  margin: 0 0.5rem 1rem;
+}
+
 
 /*Bootstrap*/
 

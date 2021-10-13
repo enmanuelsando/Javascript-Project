@@ -25,17 +25,21 @@
                 </a>
                 <a class="navbar-brand" href="./index.html">C-137 Vinyl Store</a>
             </div>
-            <button class="btn btn-outline-dark" type="submit">
-                <i class="bi-cart-fill me-1"></i>
-                Cart
-                <span id="productosAgregados" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-            </button>
-            </form>
+            <div>
+                <button onclick="loginModal()" id="loginbtn" class="btn btn-outline-dark">Login</button>
+                <button class="btn btn-outline-dark" type="submit" data-toggle="modal" data-target="#cartmodal">
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span id="productosAgregados" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                </button>
+            </div>
         </div>
         </div>
     </nav>
+
+
     <!-- Header-->
-    <header class="bg-dark py-5">
+    <header id="bgGradient" class="py-5">
         <div class="container px-4 px-lg-5 my-5">
             <div class="text-center text-white">
                 <h1 class="display-4 fw-bolder">Best Music Shop Out There</h1>
@@ -48,8 +52,10 @@
             <!--Aside-->
             <aside class="col-2" id="asideEs">
                 <div>
-                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMayor()"> Productos Mayor de 30000$ </button>
-                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMenor()">Productos Menor de 30000$</button>
+                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMayor()"> Productos Mayor de 30000$
+                    </button>
+                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMenor()">Productos Menor de
+                        30000$</button>
                     <h4 id="p1">Si deseas algun otro album te lo encontramos! <br>
                         Pidelo aqui!
                     </h4>
@@ -87,6 +93,36 @@
             <p class="m-0 text-center text-white">c-137musicshop@gmail.com</p>
         </div>
     </footer>
+    <!--Login-->
+
+
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-title text-center">
+                        <h4>Login</h4>
+                    </div>
+                    <div class="d-flex flex-column text-center">
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="uname" placeholder="Your username...">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password"
+                                    placeholder="Your password...">
+                            </div>
+                            <button onclick="login()" type="button" class="btn btn-dark btn-block btn-round">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
 </body>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -94,6 +130,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
 <script src="js/scripts.js" defer></script>
+<script src="js/login.js" defer></script>
 <script src="js/main.js" defer></script>
 
 </html>
