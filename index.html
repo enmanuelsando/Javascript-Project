@@ -3,9 +3,8 @@
 
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
     <title>C-137 Music Shop</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -13,6 +12,14 @@
     <link href="css/styles.css" rel="stylesheet" />
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/JQUERY/jquery-3.6.0.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/filtro.js" defer></script>
 </head>
 
 <body>
@@ -26,12 +33,16 @@
                 <a class="navbar-brand" href="./index.html">C-137 Vinyl Store</a>
             </div>
             <div>
-                <button onclick="loginModal()" id="loginbtn" class="btn btn-outline-dark">Login</button>
-                <button class="btn btn-outline-dark" type="submit" data-toggle="modal" data-target="#cartmodal">
-                    <i class="bi-cart-fill me-1"></i>
-                    Cart
-                    <span id="productosAgregados" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                </button>
+                <div class="row" id="loginbtn">
+                    <button onclick="loginModal()" class="btn btn-outline-dark">Login</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-outline-dark" type="submit" data-toggle="modal" data-target="#cartmodal">
+                        <a href="carrito.html"><i class="bi-cart-fill me-1"></i>
+                            Cart</a>
+                        <span id="contador-carrito" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </div>
             </div>
         </div>
         </div>
@@ -52,10 +63,18 @@
             <!--Aside-->
             <aside class="col-2" id="asideEs">
                 <div>
-                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMayor()"> Productos Mayor de 30000$
-                    </button>
-                    <button class="btn btn-outline-dark mt-auto" onclick="filtroPorMenor()">Productos Menor de
-                        30000$</button>
+                    <ul class="col">
+                        <li class="row"><a class="btn btn-outline-dark" href="#!" onclick="filtrarProductos()"> Todos
+                                los Productos</a></li>
+                        <li class="row"><a class="btn btn-outline-dark" href="#!"
+                                onclick="filtrarProductos('disc')">Discos</a></li>
+                        <li class="row"><a class="btn btn-outline-dark" href="#!"
+                                onclick="filtrarProductos('tshirt')">T-shirts</a></li>
+                        <li class="row"><a class="btn btn-outline-dark" href="#!"
+                                onclick="filtrarProductos('sweatshirt')">Hoodies</a></li>
+                        <li class="row"><a class="btn btn-outline-dark" href="#!"
+                                onclick="filtrarProductos('other')">Otros</a></li>
+                    </ul>
                     <h4 id="p1">Si deseas algun otro album te lo encontramos! <br>
                         Pidelo aqui!
                     </h4>
@@ -118,19 +137,16 @@
                                 <input type="password" class="form-control" id="password"
                                     placeholder="Your password...">
                             </div>
-                            <button onclick="login()" type="button" class="btn btn-dark btn-block btn-round">Login</button>
+                            <button onclick="login()" type="button"
+                                class="btn btn-dark btn-block btn-round">Login</button>
                         </form>
                     </div>
                 </div>
             </div>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+                integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+                crossorigin="anonymous">
 </body>
-<!-- Bootstrap core JS-->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- Core theme JS-->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous" defer></script>
-<script src="js/scripts.js" defer></script>
-<script src="js/login.js" defer></script>
-<script src="js/main.js" defer></script>
 
 </html>

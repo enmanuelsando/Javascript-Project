@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>C-137 Music Shop</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/JQUERY/jquery-3.6.0.min.js" defer></script>
+    <script src="js/scripts.js" defer></script>
+    <script src="js/login.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/carrito.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container px-4 px-lg-5">
+            <div>
+                <a href="./index.html" class="navbar-brand">
+                    <img src="img/vynildisc.png" class="logo" alt="logo">
+                </a>
+                <a class="navbar-brand" href="./index.html">C-137 Vinyl Store</a>
+            </div>
+            <div>
+                <div class="row" id="loginbtn">
+                    <button onclick="loginModal()" class="btn btn-outline-dark">Login</button>
+                </div>
+                <div class="row">
+                    <button class="btn btn-outline-dark" type="submit" data-toggle="modal" data-target="#cartmodal"
+                        id="btnCarrito" onsubmit="event.preventDefault()">
+                        <a href="carrito.html"><i class="bi-cart-fill me-1"></i>
+                            Cart</a>
+                        <span id="contador-carrito" class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!--Carrito-->
+    <main>
+        <div class="container">
+            <div class="row mt-3">
+                <div class="col">
+                    <h2 class="d-flex justify-content-center mb-3">Carrito</h2>
+                </div>
+            </div>
+            <section class="container">
+                <div id="baseDeDatos" class="form-group table-responsive">
+                    <table class="form-group table" id="lista-compra">
+                        <thead>
+                            <tr>
+                                <th scope="col">Imagen</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">Eliminar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="listado">
+                        </tbody>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col" class="text-right">TOTAL :</th>
+                            <th scope="col">
+                                <p id="total"> </p>
+                            </th>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+            <div class="row justify-content-between">
+                <div class="col-md-4 mb-2">
+                    <a href="index.html" class="btn btn-dark btn-block">Seguir comprando</a>
+                </div>
+                <div class="col-xs-12 col-md-4">
+                    <button class="btn btn-success btn-block" id="procesar-compra" onclick="pagar(totalFinal)">Realizar
+                        compra</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Footer-->
+    <footer class="py-5 bg-dark bg-opacity-75">
+        <div class="container text-center">
+            <img class="logo" src="img/vynildisc.png" alt="vynil disc">
+        </div>
+        <div>
+            <p class="m-0 text-center text-white">Contacto</p>
+            <p class="m-0 text-center text-white">c-137musicshop@gmail.com</p>
+        </div>
+    </footer>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+</body>
+
+</html>

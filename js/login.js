@@ -15,6 +15,6 @@ function login(){
     localStorage.setItem('password', password.value);
     $('#loginModal').modal('hide');
 
-document.getElementById('loginbtn').innerHTML = `<h4>Hola "${user.value}"!</h4>`;
+    document.getElementById('loginbtn').innerHTML = `<h4>Hola ${username.value}!</h4>`;
 }
 

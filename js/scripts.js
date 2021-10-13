@@ -1,3 +1,17 @@
+class Ecommerce {
+    constructor(){
+        this.baseDeDatos = [];
+        this.enviosGratis = true;
+    }
+
+    agregarProducto(){}
+
+    sacarProducto(){}
+
+    filtrarProductos(){}
+}
+const ecommerce = new Ecommerce();
+
 /*Eventos*/
 
 function validarTelefono() {
@@ -60,12 +74,12 @@ $(document).ready(function () {
 
 // // Ajax con JSON
 
-function GetDatos(){
-  fetch('https://rickandmortyapi.com/api/character').then(response => {
-    return response.json();
-  }).then(response => {
-    console.log(response);
-  })
-}
+// function GetDatos(){
+//   fetch('https://rickandmortyapi.com/api/character').then(response => {
+//     return response.json();
+//   }).then(response => {
+//     console.log(response);
+//   })
+// }
 
-GetDatos();
+// GetDatos();
